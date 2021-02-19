@@ -22,4 +22,10 @@ sketch
 yarn.lock
 package-lock.json
 
+# production
 /build
+
+# dotenv environment variables file
+.env
+
+.firebase
