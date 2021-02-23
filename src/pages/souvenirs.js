@@ -15,7 +15,7 @@ import {
   ImageField,
 } from "react-admin";
 
-const RestaurantFilter = (props) => {
+const SouvenirFilter = (props) => {
   return (
     <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
@@ -23,11 +23,11 @@ const RestaurantFilter = (props) => {
   );
 };
 
-export const RestaurantList = (props) => {
+export const SouvenirList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
-    <List filters={<RestaurantFilter />} {...props}>
+    <List filters={<SouvenirFilter />} {...props}>
       {isSmall ? (
         <SimpleList
           primaryText={(record) => record.title}
@@ -49,11 +49,12 @@ export const RestaurantList = (props) => {
   );
 };
 
-export const RestaurantEdit = (props) => (
+export const SouvenirEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" fullWidth />
       <TextInput source="title" fullWidth />
+      <TextInput multiline source="body" fullWidth />
       <TextInput multiline source="description" fullWidth />
       <ImageInput
         source="cover"
@@ -78,7 +79,7 @@ export const RestaurantEdit = (props) => (
   </Edit>
 );
 
-export const RestaurantCreate = (props) => (
+export const SouvenirCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <TextInput source="title" fullWidth />

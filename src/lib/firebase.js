@@ -91,8 +91,10 @@ export const myAuthProvider = {
   // Wrap the login and check for custom claims
   login: async (params) => {
     const user = await authProvider.login(params);
+    // console.log("user: ", user);
     // getPermissions is how when get the custom claims for the logged in user
     const claims = await authProvider.getPermissions();
+    // console.log("claims: ", claims);
     // const isAdmin = Array.isArray(claims) && claims.includes("admin");
     if (!claims.isAdmin) {
       // Make sure user is logged out, if not an admin

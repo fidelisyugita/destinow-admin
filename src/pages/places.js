@@ -15,7 +15,7 @@ import {
   ImageField,
 } from "react-admin";
 
-const RestaurantFilter = (props) => {
+const PlaceFilter = (props) => {
   return (
     <Filter {...props}>
       <TextInput label="Search" source="q" alwaysOn />
@@ -23,11 +23,11 @@ const RestaurantFilter = (props) => {
   );
 };
 
-export const RestaurantList = (props) => {
+export const PlaceList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
-    <List filters={<RestaurantFilter />} {...props}>
+    <List filters={<PlaceFilter />} {...props}>
       {isSmall ? (
         <SimpleList
           primaryText={(record) => record.title}
@@ -49,12 +49,14 @@ export const RestaurantList = (props) => {
   );
 };
 
-export const RestaurantEdit = (props) => (
+export const PlaceEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" fullWidth />
       <TextInput source="title" fullWidth />
+      <TextInput multiline source="body" fullWidth />
       <TextInput multiline source="description" fullWidth />
+      <TextInput multiline source="travelTips" fullWidth />
       <ImageInput
         source="cover"
         label="Cover (max 1MB)"
@@ -78,11 +80,12 @@ export const RestaurantEdit = (props) => (
   </Edit>
 );
 
-export const RestaurantCreate = (props) => (
+export const PlaceCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <TextInput source="title" fullWidth />
       <TextInput multiline source="description" fullWidth />
+      <TextInput multiline source="travelTips" fullWidth />
       <ImageInput
         source="cover"
         label="Cover (max 1MB)"
