@@ -90,16 +90,16 @@ export const PlaceEdit = (props) => (
           source="cover"
           label="Cover (max 1MB)"
           accept="image/*"
-          placeholder={<p>Drop your file here</p>}
+          placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
-          source="pictures"
+          source="images"
           label="Images (max 1MB)"
           accept="image/*"
-          placeholder={<p>Drop your files here</p>}
+          placeholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
@@ -146,16 +146,16 @@ export const PlaceCreate = (props) => (
           source="cover"
           label="Cover (max 1MB)"
           accept="image/*"
-          placeholder={<p>Drop your file here</p>}
+          placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
-          source="pictures"
+          source="images"
           label="Images (max 1MB)"
           accept="image/*"
-          placeholder={<p>Drop your files here</p>}
+          placeholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >

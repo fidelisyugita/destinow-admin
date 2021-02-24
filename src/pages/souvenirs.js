@@ -81,16 +81,16 @@ export const SouvenirEdit = (props) => (
           source="cover"
           label="Cover (max 1MB)"
           accept="image/*"
-          Souvenirholder={<p>Drop your file here</p>}
+          Souvenirholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
-          source="pictures"
+          source="images"
           label="Images (max 1MB)"
           accept="image/*"
-          Souvenirholder={<p>Drop your files here</p>}
+          Souvenirholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
@@ -128,16 +128,16 @@ export const SouvenirCreate = (props) => (
           source="cover"
           label="Cover (max 1MB)"
           accept="image/*"
-          Souvenirholder={<p>Drop your file here</p>}
+          Souvenirholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
-          source="pictures"
+          source="images"
           label="Images (max 1MB)"
           accept="image/*"
-          Souvenirholder={<p>Drop your files here</p>}
+          Souvenirholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
