@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery, Box } from "@material-ui/core";
 import {
   Filter,
   List,
@@ -9,11 +9,15 @@ import {
   EditButton,
   Edit,
   Create,
-  SimpleForm,
   TextInput,
   ImageInput,
   ImageField,
+  BooleanInput,
+  TabbedForm,
+  FormTab,
+  RichTextField,
 } from "react-admin";
+import RichTextInput from "ra-input-rich-text";
 
 const RestaurantFilter = (props) => {
   return (
@@ -40,8 +44,8 @@ export const RestaurantList = (props) => {
       ) : (
         <Datagrid>
           <TextField source="id" fullWidth />
-          <TextField source="title" fullWidth />
-          <TextField source="description" fullWidth />
+          <TextField source="name" fullWidth />
+          <RichTextField source="description" fullWidth />
           <EditButton />
         </Datagrid>
       )}
@@ -51,57 +55,117 @@ export const RestaurantList = (props) => {
 
 export const RestaurantEdit = (props) => (
   <Edit {...props}>
-    <SimpleForm>
-      <TextInput disabled source="id" fullWidth />
-      <TextInput source="title" fullWidth />
-      <TextInput multiline source="description" fullWidth />
-      <ImageInput
-        source="cover"
-        label="Cover (max 1MB)"
-        accept="image/*"
-        placeholder={<p>Drop your file here</p>}
-        maxSize={1024 * 1 * 1000} //1MB
-      >
-        <ImageField source="src" title="title" />
-      </ImageInput>
-      <ImageInput
-        source="pictures"
-        label="Images (max 1MB)"
-        accept="image/*"
-        placeholder={<p>Drop your files here</p>}
-        multiple
-        maxSize={1024 * 1 * 1000} //1MB
-      >
-        <ImageField source="src" title="title" />
-      </ImageInput>
-    </SimpleForm>
+    <TabbedForm>
+      <FormTab label="summary">
+        <TextInput disabled source="id" fullWidth />
+        <TextInput source="name" fullWidth />
+      </FormTab>
+
+      <FormTab label="description">
+        <RichTextInput source="description" />
+      </FormTab>
+
+      <FormTab label="facilities">
+        <Box display="flex" p="1em">
+          <Box flex={1} mr="1em">
+            <BooleanInput source="facilities[parking]" label="Parking" />
+            <BooleanInput source="facilities[toilet]" label="Toilet" />
+            <BooleanInput source="facilities[wifi]" label="Wifi" />
+            <BooleanInput source="facilities[mushola]" label="Mushola" />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking area"
+            />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput
+              source="facilities[outdoorSeat]"
+              label="Outdoor seat"
+            />
+          </Box>
+        </Box>
+      </FormTab>
+
+      <FormTab label="pictures">
+        <ImageInput
+          source="cover"
+          label="Cover (max 1MB)"
+          accept="image/*"
+          Restaurantholder={<p>Drop your file here</p>}
+          maxSize={1024 * 1 * 1000} //1MB
+        >
+          <ImageField source="src" title="name" />
+        </ImageInput>
+        <ImageInput
+          source="pictures"
+          label="Images (max 1MB)"
+          accept="image/*"
+          Restaurantholder={<p>Drop your files here</p>}
+          multiple
+          maxSize={1024 * 1 * 1000} //1MB
+        >
+          <ImageField source="src" title="name" />
+        </ImageInput>
+      </FormTab>
+    </TabbedForm>
   </Edit>
 );
 
 export const RestaurantCreate = (props) => (
   <Create {...props}>
-    <SimpleForm>
-      <TextInput source="title" fullWidth />
-      <TextInput multiline source="description" fullWidth />
-      <ImageInput
-        source="cover"
-        label="Cover (max 1MB)"
-        accept="image/*"
-        placeholder={<p>Drop your file here</p>}
-        maxSize={1024 * 1 * 1000} //1MB
-      >
-        <ImageField source="src" title="title" />
-      </ImageInput>
-      <ImageInput
-        source="pictures"
-        label="Images (max 1MB)"
-        accept="image/*"
-        placeholder={<p>Drop your files here</p>}
-        multiple
-        maxSize={1024 * 1 * 1000} //1MB
-      >
-        <ImageField source="src" title="title" />
-      </ImageInput>
-    </SimpleForm>
+    <TabbedForm>
+      <FormTab label="summary">
+        <TextInput source="name" fullWidth />
+      </FormTab>
+
+      <FormTab label="description">
+        <RichTextInput source="description" />
+      </FormTab>
+
+      <FormTab label="facilities">
+        <Box display="flex" p="1em">
+          <Box flex={1} mr="1em">
+            <BooleanInput source="facilities[parking]" label="Parking" />
+            <BooleanInput source="facilities[toilet]" label="Toilet" />
+            <BooleanInput source="facilities[wifi]" label="Wifi" />
+            <BooleanInput source="facilities[mushola]" label="Mushola" />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking area"
+            />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput
+              source="facilities[outdoorSeat]"
+              label="Outdoor seat"
+            />
+          </Box>
+        </Box>
+      </FormTab>
+
+      <FormTab label="pictures">
+        <ImageInput
+          source="cover"
+          label="Cover (max 1MB)"
+          accept="image/*"
+          Restaurantholder={<p>Drop your file here</p>}
+          maxSize={1024 * 1 * 1000} //1MB
+        >
+          <ImageField source="src" title="name" />
+        </ImageInput>
+        <ImageInput
+          source="pictures"
+          label="Images (max 1MB)"
+          accept="image/*"
+          Restaurantholder={<p>Drop your files here</p>}
+          multiple
+          maxSize={1024 * 1 * 1000} //1MB
+        >
+          <ImageField source="src" title="name" />
+        </ImageInput>
+      </FormTab>
+    </TabbedForm>
   </Create>
 );

@@ -46,7 +46,7 @@ export const PostList = (props) => {
           <ReferenceField label="User" source="userId" reference="users">
             <TextField source="name" />
           </ReferenceField>
-          <TextField source="title" />
+          <TextField source="name" />
           <TextField source="body" />
           <EditButton />
         </Datagrid>
@@ -62,7 +62,7 @@ export const PostEdit = (props) => (
       <ReferenceInput source="userId" reference="users">
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <TextInput source="title" />
+      <TextInput source="name" />
       <TextInput multiline source="body" />
     </SimpleForm>
   </Edit>
@@ -74,7 +74,7 @@ export const PostCreate = (props) => (
       <ReferenceInput source="userId" reference="users">
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <TextInput source="title" />
+      <TextInput source="name" />
       <TextInput multiline source="body" />
     </SimpleForm>
   </Create>
