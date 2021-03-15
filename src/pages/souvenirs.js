@@ -59,6 +59,7 @@ export const SouvenirEdit = (props) => (
       <FormTab label="summary">
         <TextInput disabled source="id" fullWidth />
         <TextInput source="name" fullWidth />
+        <BooleanInput source="isActive" label="Active" />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
@@ -107,6 +108,7 @@ export const SouvenirCreate = (props) => (
     <TabbedForm>
       <FormTab label="summary">
         <TextInput source="name" fullWidth />
+        <BooleanInput source="isActive" label="Active" defaultValue={true} />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
