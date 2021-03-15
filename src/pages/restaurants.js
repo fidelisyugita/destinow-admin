@@ -59,6 +59,7 @@ export const RestaurantEdit = (props) => (
       <FormTab label="summary">
         <TextInput disabled source="id" fullWidth />
         <TextInput source="name" fullWidth />
+        <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
       <FormTab label="description">
@@ -117,6 +118,7 @@ export const RestaurantCreate = (props) => (
     <TabbedForm>
       <FormTab label="summary">
         <TextInput source="name" fullWidth />
+        <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
       <FormTab label="description">
