@@ -97,7 +97,7 @@ export const RestaurantEdit = (props) => (
           Restaurantholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -107,7 +107,7 @@ export const RestaurantEdit = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>
@@ -157,7 +157,7 @@ export const RestaurantCreate = (props) => (
           Restaurantholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -167,7 +167,7 @@ export const RestaurantCreate = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>

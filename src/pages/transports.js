@@ -86,7 +86,7 @@ export const TransportEdit = (props) => (
           Transportholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -96,7 +96,7 @@ export const TransportEdit = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>
@@ -135,7 +135,7 @@ export const TransportCreate = (props) => (
           Transportholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -145,7 +145,7 @@ export const TransportCreate = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="src" title="name" />
+          <ImageField source="uri" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>
