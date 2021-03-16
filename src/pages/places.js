@@ -96,7 +96,7 @@ export const PlaceEdit = (props) => (
           placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="uri" title="name" />
+          <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -106,7 +106,7 @@ export const PlaceEdit = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="uri" title="name" />
+          <ImageField source="src" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>
@@ -155,7 +155,7 @@ export const PlaceCreate = (props) => (
           placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="uri" title="name" />
+          <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
@@ -165,7 +165,7 @@ export const PlaceCreate = (props) => (
           multiple
           maxSize={1024 * 1 * 1000} //1MB
         >
-          <ImageField source="uri" title="name" />
+          <ImageField source="src" title="name" />
         </ImageInput>
       </FormTab>
     </TabbedForm>

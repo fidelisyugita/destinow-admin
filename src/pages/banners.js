@@ -67,7 +67,7 @@ export const BannerEdit = (props) => (
         placeholder={<p>Drop your image here</p>}
         maxSize={1024 * 1 * 1000} //1MB
       >
-        <ImageField source="uri" title="name" />
+        <ImageField source="src" title="name" />
       </ImageInput>
       <TextInput multiline source="description" fullWidth />
     </SimpleForm>
@@ -86,7 +86,7 @@ export const BannerCreate = (props) => (
         placeholder={<p>Drop your image here</p>}
         maxSize={1024 * 1 * 1000} //1MB
       >
-        <ImageField source="uri" title="name" />
+        <ImageField source="src" title="name" />
       </ImageInput>
       <TextInput multiline source="description" fullWidth />
     </SimpleForm>
