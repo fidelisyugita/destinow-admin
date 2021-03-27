@@ -59,6 +59,19 @@ export const RestaurantEdit = (props) => (
       <FormTab label="summary">
         <TextInput disabled source="id" fullWidth />
         <TextInput source="name" fullWidth />
+        <TextInput source="city" fullWidth />
+        <TextInput source="address" fullWidth />
+        <TextInput
+          source="openingHours"
+          initialValue="8 AM - 10 PM"
+          fullWidth
+        />
+        <NumberInput
+          source="priceEstimation"
+          fullWidth
+          step={1000}
+          defaultValue={5000}
+        />
         <BooleanInput source="isActive" label="Active" />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
@@ -119,6 +132,19 @@ export const RestaurantCreate = (props) => (
     <TabbedForm>
       <FormTab label="summary">
         <TextInput source="name" fullWidth />
+        <TextInput source="city" fullWidth />
+        <TextInput source="address" fullWidth />
+        <TextInput
+          source="openingHours"
+          initialValue="8 AM - 10 PM"
+          fullWidth
+        />
+        <NumberInput
+          source="priceEstimation"
+          fullWidth
+          step={1000}
+          defaultValue={5000}
+        />
         <BooleanInput source="isActive" label="Active" defaultValue={true} />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
