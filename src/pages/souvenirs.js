@@ -16,6 +16,7 @@ import {
   TabbedForm,
   FormTab,
   RichTextField,
+  NumberInput,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
 
