@@ -45,11 +45,10 @@ export const BannerList = (props) => {
         />
       ) : (
         <Datagrid>
-          <TextField source="id" />
-          <TextField source="name" />
-          <TextInput source="url" />
-          <TextField source="description" />
-          <BooleanField source="isActive" />
+          <TextField source="id" fullWidth />
+          <TextField source="name" fullWidth />
+          <TextField source="url" fullWidth />
+          <BooleanField source="isActive" fullWidth />
           <EditButton />
         </Datagrid>
       )}
