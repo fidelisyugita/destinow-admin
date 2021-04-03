@@ -15,6 +15,8 @@ import {
   TextInput,
   ImageInput,
   ImageField,
+  BooleanInput,
+  BooleanField,
 } from "react-admin";
 
 const BannerFilter = (props) => {
@@ -47,6 +49,7 @@ export const BannerList = (props) => {
           <TextField source="name" />
           <TextInput source="url" />
           <TextField source="description" />
+          <BooleanField source="isActive" />
           <EditButton />
         </Datagrid>
       )}
@@ -70,6 +73,7 @@ export const BannerEdit = (props) => (
         <ImageField source="src" title="name" />
       </ImageInput>
       <TextInput multiline source="description" fullWidth />
+      <BooleanInput source="isActive" label="Active" />
     </SimpleForm>
   </Edit>
 );
@@ -89,6 +93,7 @@ export const BannerCreate = (props) => (
         <ImageField source="src" title="name" />
       </ImageInput>
       <TextInput multiline source="description" fullWidth />
+      <BooleanInput source="isActive" label="Active" defaultValue={true} />
     </SimpleForm>
   </Create>
 );
