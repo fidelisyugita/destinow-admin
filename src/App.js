@@ -62,7 +62,7 @@ const App = () => (
     />
     <Resource
       icon={DirectionsBikeIcon}
-      name="transport"
+      name="transports"
       list={TransportList}
       edit={TransportEdit}
       create={TransportCreate}
