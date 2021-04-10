@@ -46,7 +46,7 @@ export const TransportList = (props) => {
         <Datagrid>
           <TextField source="id" fullWidth />
           <TextField source="name" fullWidth />
-          <RichTextField source="description" fullWidth />
+          <RichTextField source="policy" fullWidth />
           <EditButton />
         </Datagrid>
       )}
@@ -77,17 +77,20 @@ export const TransportEdit = (props) => (
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
-      <FormTab label="description">
-        <RichTextInput source="description" />
+      <FormTab label="policy">
+        <RichTextInput source="policy" />
+      </FormTab>
+      <FormTab label="termsConditions">
+        <RichTextInput source="termsConditions" />
       </FormTab>
 
-      <FormTab label="facilities">
+      <FormTab label="types">
         <Box display="flex" p="1em">
           <Box flex={1} mr="1em">
-            <BooleanInput source="facilities[parking]" label="Parking" />
-            <BooleanInput source="facilities[toilet]" label="Toilet" />
-            <BooleanInput source="facilities[wifi]" label="Wifi" />
-            <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="types[car]" label="Car" />
+            <BooleanInput source="types[motorcycle]" label="Motorcycle" />
+            <BooleanInput source="types[bike]" label="Bike" />
+            <BooleanInput source="types[boat]" label="Boat" />
           </Box>
         </Box>
       </FormTab>
@@ -139,17 +142,20 @@ export const TransportCreate = (props) => (
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
-      <FormTab label="description">
-        <RichTextInput source="description" />
+      <FormTab label="policy">
+        <RichTextInput source="policy" />
+      </FormTab>
+      <FormTab label="termsConditions">
+        <RichTextInput source="termsConditions" />
       </FormTab>
 
-      <FormTab label="facilities">
+      <FormTab label="types">
         <Box display="flex" p="1em">
           <Box flex={1} mr="1em">
-            <BooleanInput source="facilities[parking]" label="Parking" />
-            <BooleanInput source="facilities[toilet]" label="Toilet" />
-            <BooleanInput source="facilities[wifi]" label="Wifi" />
-            <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="types[car]" label="Car" />
+            <BooleanInput source="types[motorcycle]" label="Motorcycle" />
+            <BooleanInput source="types[bike]" label="Bike" />
+            <BooleanInput source="types[boat]" label="Boat" />
           </Box>
         </Box>
       </FormTab>

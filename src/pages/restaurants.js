@@ -96,8 +96,8 @@ export const RestaurantEdit = (props) => (
             />
             <BooleanInput source="facilities[playground]" label="Playground" />
             <BooleanInput
-              source="facilities[outdoorSeat]"
-              label="Outdoor seat"
+              source="facilities[outdoorSpace]"
+              label="Outdoor Space"
             />
           </Box>
         </Box>

@@ -91,9 +91,10 @@ export const PlaceEdit = (props) => (
             <BooleanInput source="facilities[mushola]" label="Mushola" />
           </Box>
           <Box flex={1}>
-            <BooleanInput source="facilities[watersport]" label="Watersport" />
             <BooleanInput source="facilities[restaurant]" label="Restaurant" />
             <BooleanInput source="facilities[lodging]" label="Lodging" />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput source="facilities[watersport]" label="Watersport" />
           </Box>
         </Box>
       </FormTab>
@@ -156,16 +157,28 @@ export const PlaceCreate = (props) => (
 
       <FormTab label="facilities">
         <Box display="flex" p="1em">
-          <Box flex={1} mr="1em">
-            <BooleanInput source="facilities[parking]" label="Parking" />
-            <BooleanInput source="facilities[toilet]" label="Toilet" />
-            <BooleanInput source="facilities[wifi]" label="Wifi" />
-            <BooleanInput source="facilities[mushola]" label="Mushola" />
-          </Box>
-          <Box flex={1}>
-            <BooleanInput source="facilities[watersport]" label="Watersport" />
-            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
-            <BooleanInput source="facilities[lodging]" label="Lodging" />
+          <Box display="flex" p="1em">
+            <Box flex={1} mr="1em">
+              <BooleanInput source="facilities[parking]" label="Parking" />
+              <BooleanInput source="facilities[toilet]" label="Toilet" />
+              <BooleanInput source="facilities[wifi]" label="Wifi" />
+              <BooleanInput source="facilities[mushola]" label="Mushola" />
+            </Box>
+            <Box flex={1}>
+              <BooleanInput
+                source="facilities[restaurant]"
+                label="Restaurant"
+              />
+              <BooleanInput source="facilities[lodging]" label="Lodging" />
+              <BooleanInput
+                source="facilities[playground]"
+                label="Playground"
+              />
+              <BooleanInput
+                source="facilities[watersport]"
+                label="Watersport"
+              />
+            </Box>
           </Box>
         </Box>
       </FormTab>
