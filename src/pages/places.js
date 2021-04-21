@@ -89,12 +89,33 @@ export const PlaceEdit = (props) => (
             <BooleanInput source="facilities[toilet]" label="Toilet" />
             <BooleanInput source="facilities[wifi]" label="Wifi" />
             <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
           </Box>
           <Box flex={1}>
-            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
             <BooleanInput source="facilities[lodging]" label="Lodging" />
             <BooleanInput source="facilities[playground]" label="Playground" />
             <BooleanInput source="facilities[watersport]" label="Watersport" />
+            <BooleanInput source="facilities[open24Hour]" label="Open 24Hour" />
+            <BooleanInput
+              source="facilities[deliveryService]"
+              label="Delivery Service"
+            />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[liveMusic]" label="Live Music" />
+            <BooleanInput
+              source="facilities[outdoorSheets]"
+              label="Outdoor Sheets"
+            />
+            <BooleanInput
+              source="facilities[reservation]"
+              label="Reservation"
+            />
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking Area"
+            />
+            <BooleanInput source="facilities[takeAway]" label="Take Away" />
           </Box>
         </Box>
       </FormTab>
@@ -157,28 +178,38 @@ export const PlaceCreate = (props) => (
 
       <FormTab label="facilities">
         <Box display="flex" p="1em">
-          <Box display="flex" p="1em">
-            <Box flex={1} mr="1em">
-              <BooleanInput source="facilities[parking]" label="Parking" />
-              <BooleanInput source="facilities[toilet]" label="Toilet" />
-              <BooleanInput source="facilities[wifi]" label="Wifi" />
-              <BooleanInput source="facilities[mushola]" label="Mushola" />
-            </Box>
-            <Box flex={1}>
-              <BooleanInput
-                source="facilities[restaurant]"
-                label="Restaurant"
-              />
-              <BooleanInput source="facilities[lodging]" label="Lodging" />
-              <BooleanInput
-                source="facilities[playground]"
-                label="Playground"
-              />
-              <BooleanInput
-                source="facilities[watersport]"
-                label="Watersport"
-              />
-            </Box>
+          <Box flex={1} mr="1em">
+            <BooleanInput source="facilities[parking]" label="Parking" />
+            <BooleanInput source="facilities[toilet]" label="Toilet" />
+            <BooleanInput source="facilities[wifi]" label="Wifi" />
+            <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[lodging]" label="Lodging" />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput source="facilities[watersport]" label="Watersport" />
+            <BooleanInput source="facilities[open24Hour]" label="Open 24Hour" />
+            <BooleanInput
+              source="facilities[deliveryService]"
+              label="Delivery Service"
+            />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[liveMusic]" label="Live Music" />
+            <BooleanInput
+              source="facilities[outdoorSheets]"
+              label="Outdoor Sheets"
+            />
+            <BooleanInput
+              source="facilities[reservation]"
+              label="Reservation"
+            />
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking Area"
+            />
+            <BooleanInput source="facilities[takeAway]" label="Take Away" />
           </Box>
         </Box>
       </FormTab>

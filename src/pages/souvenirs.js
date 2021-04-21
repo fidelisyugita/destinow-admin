@@ -88,6 +88,33 @@ export const SouvenirEdit = (props) => (
             <BooleanInput source="facilities[toilet]" label="Toilet" />
             <BooleanInput source="facilities[wifi]" label="Wifi" />
             <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[lodging]" label="Lodging" />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput source="facilities[watersport]" label="Watersport" />
+            <BooleanInput source="facilities[open24Hour]" label="Open 24Hour" />
+            <BooleanInput
+              source="facilities[deliveryService]"
+              label="Delivery Service"
+            />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[liveMusic]" label="Live Music" />
+            <BooleanInput
+              source="facilities[outdoorSheets]"
+              label="Outdoor Sheets"
+            />
+            <BooleanInput
+              source="facilities[reservation]"
+              label="Reservation"
+            />
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking Area"
+            />
+            <BooleanInput source="facilities[takeAway]" label="Take Away" />
           </Box>
         </Box>
       </FormTab>
@@ -150,6 +177,33 @@ export const SouvenirCreate = (props) => (
             <BooleanInput source="facilities[toilet]" label="Toilet" />
             <BooleanInput source="facilities[wifi]" label="Wifi" />
             <BooleanInput source="facilities[mushola]" label="Mushola" />
+            <BooleanInput source="facilities[restaurant]" label="Restaurant" />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[lodging]" label="Lodging" />
+            <BooleanInput source="facilities[playground]" label="Playground" />
+            <BooleanInput source="facilities[watersport]" label="Watersport" />
+            <BooleanInput source="facilities[open24Hour]" label="Open 24Hour" />
+            <BooleanInput
+              source="facilities[deliveryService]"
+              label="Delivery Service"
+            />
+          </Box>
+          <Box flex={1}>
+            <BooleanInput source="facilities[liveMusic]" label="Live Music" />
+            <BooleanInput
+              source="facilities[outdoorSheets]"
+              label="Outdoor Sheets"
+            />
+            <BooleanInput
+              source="facilities[reservation]"
+              label="Reservation"
+            />
+            <BooleanInput
+              source="facilities[smokingArea]"
+              label="Smoking Area"
+            />
+            <BooleanInput source="facilities[takeAway]" label="Take Away" />
           </Box>
         </Box>
       </FormTab>
