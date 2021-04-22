@@ -73,6 +73,9 @@ export const PlaceEdit = (props) => (
           step={1000}
           defaultValue={5000}
         />
+
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
         <BooleanInput source="isActive" label="Active" />
         <BooleanInput source="isFavorite" label="Favorite" />
         <BooleanInput source="isRecommended" label="Recommend" />
@@ -167,6 +170,9 @@ export const PlaceCreate = (props) => (
           step={1000}
           defaultValue={5000}
         />
+
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
         <BooleanInput source="isActive" label="Active" defaultValue={true} />
         <BooleanInput source="isFavorite" label="Favorite" />
         <BooleanInput source="isRecommended" label="Recommend" />

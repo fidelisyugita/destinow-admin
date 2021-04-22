@@ -73,6 +73,9 @@ export const SouvenirEdit = (props) => (
           step={1000}
           defaultValue={5000}
         />
+
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
         <BooleanInput source="isActive" label="Active" />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
@@ -162,6 +165,9 @@ export const SouvenirCreate = (props) => (
           step={1000}
           defaultValue={5000}
         />
+
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
         <BooleanInput source="isActive" label="Active" defaultValue={true} />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>

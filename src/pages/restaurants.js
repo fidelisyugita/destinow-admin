@@ -67,6 +67,9 @@ export const RestaurantEdit = (props) => (
           initialValue="8 AM - 10 PM"
           fullWidth
         />
+
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
         <NumberInput
           source="priceEstimation"
           fullWidth
@@ -162,6 +165,9 @@ export const RestaurantCreate = (props) => (
           step={1000}
           defaultValue={5000}
         />
+        <NumberInput source="position[longitude]" fullWidth />
+        <NumberInput source="position[latitude]" fullWidth />
+
         <BooleanInput source="isActive" label="Active" defaultValue={true} />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
