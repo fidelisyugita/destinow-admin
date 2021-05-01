@@ -17,6 +17,8 @@ import {
   FormTab,
   RichTextField,
   NumberInput,
+  ArrayInput,
+  SimpleFormIterator,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
 
@@ -119,6 +121,30 @@ export const TransportEdit = (props) => (
           <ImageField source="src" title="name" />
         </ImageInput>
       </FormTab>
+
+      <FormTab label="menus">
+        <ArrayInput source="menus">
+          <SimpleFormIterator>
+            <ImageInput
+              source="image"
+              label="Image (max 1MB)"
+              accept="image/*"
+              Restaurantholder={<p>Drop your image here</p>}
+              maxSize={1024 * 1 * 1000} //1MB
+            >
+              <ImageField source="src" title="name" />
+            </ImageInput>
+            <TextInput source="name" fullWidth label="Name" />
+            <TextInput
+              source="description"
+              fullWidth
+              label="Price/Description"
+            />
+            <NumberInput source="capacity" fullWidth label="Capacity" />
+            <BooleanInput source="isRecommended" label="Recommend" />
+          </SimpleFormIterator>
+        </ArrayInput>
+      </FormTab>
     </TabbedForm>
   </Edit>
 );
@@ -186,6 +212,30 @@ export const TransportCreate = (props) => (
         >
           <ImageField source="src" title="name" />
         </ImageInput>
+      </FormTab>
+
+      <FormTab label="menus">
+        <ArrayInput source="menus">
+          <SimpleFormIterator>
+            <ImageInput
+              source="image"
+              label="Image (max 1MB)"
+              accept="image/*"
+              Restaurantholder={<p>Drop your image here</p>}
+              maxSize={1024 * 1 * 1000} //1MB
+            >
+              <ImageField source="src" title="name" />
+            </ImageInput>
+            <TextInput source="name" fullWidth label="Name" />
+            <TextInput
+              source="description"
+              fullWidth
+              label="Price/Description"
+            />
+            <NumberInput source="capacity" fullWidth label="Capacity" />
+            <BooleanInput source="isRecommended" label="Recommend" />
+          </SimpleFormIterator>
+        </ArrayInput>
       </FormTab>
     </TabbedForm>
   </Create>
