@@ -64,10 +64,10 @@ export const BannerEdit = (props) => (
       <TextInput multiline source="url" fullWidth />
       <ImageInput
         source="cover"
-        label="Cover (max 1MB)"
+        label="Cover (max 200KB)"
         accept="image/*"
         placeholder={<p>Drop your image here</p>}
-        maxSize={1024 * 1 * 1000} //1MB
+        maxSize={1024 * 1 * 200} //200KB
       >
         <ImageField source="src" title="name" />
       </ImageInput>
@@ -84,10 +84,10 @@ export const BannerCreate = (props) => (
       <TextInput multiline source="url" fullWidth />
       <ImageInput
         source="cover"
-        label="Cover (max 1MB)"
+        label="Cover (max 200KB)"
         accept="image/*"
         placeholder={<p>Drop your image here</p>}
-        maxSize={1024 * 1 * 1000} //1MB
+        maxSize={1024 * 1 * 200} //200KB
       >
         <ImageField source="src" title="name" />
       </ImageInput>

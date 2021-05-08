@@ -127,20 +127,20 @@ export const RestaurantEdit = (props) => (
       <FormTab label="pictures">
         <ImageInput
           source="cover"
-          label="Cover (max 1MB)"
+          label="Cover (max 200KB)"
           accept="image/*"
           Restaurantholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 1000} //1MB
+          maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
-          label="Images (max 1MB)"
+          label="Images (max 200KB)"
           accept="image/*"
           Restaurantholder={<p>Drop your images here</p>}
           multiple
-          maxSize={1024 * 1 * 1000} //1MB
+          maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
@@ -151,10 +151,10 @@ export const RestaurantEdit = (props) => (
           <SimpleFormIterator>
             <ImageInput
               source="image"
-              label="Image (max 1MB)"
+              label="Image (max 200KB)"
               accept="image/*"
               Restaurantholder={<p>Drop your image here</p>}
-              maxSize={1024 * 1 * 1000} //1MB
+              maxSize={1024 * 1 * 200} //200KB
             >
               <ImageField source="src" title="name" />
             </ImageInput>
@@ -238,20 +238,20 @@ export const RestaurantCreate = (props) => (
       <FormTab label="pictures">
         <ImageInput
           source="cover"
-          label="Cover (max 1MB)"
+          label="Cover (max 200KB)"
           accept="image/*"
           Restaurantholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 1000} //1MB
+          maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
-          label="Images (max 1MB)"
+          label="Images (max 200KB)"
           accept="image/*"
           Restaurantholder={<p>Drop your images here</p>}
           multiple
-          maxSize={1024 * 1 * 1000} //1MB
+          maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
@@ -262,10 +262,10 @@ export const RestaurantCreate = (props) => (
           <SimpleFormIterator>
             <ImageInput
               source="image"
-              label="Image (max 1MB)"
+              label="Image (max 200KB)"
               accept="image/*"
               Restaurantholder={<p>Drop your image here</p>}
-              maxSize={1024 * 1 * 1000} //1MB
+              maxSize={1024 * 1 * 200} //200KB
             >
               <ImageField source="src" title="name" />
             </ImageInput>
