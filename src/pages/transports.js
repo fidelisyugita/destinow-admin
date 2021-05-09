@@ -64,6 +64,7 @@ export const TransportEdit = (props) => (
         <TextInput source="name" fullWidth />
         <TextInput source="city" fullWidth />
         <TextInput source="address" fullWidth />
+        <TextInput source="phoneNumber" fullWidth />
         <TextInput
           source="openingHours"
           initialValue="8 AM - 10 PM"
@@ -156,6 +157,7 @@ export const TransportCreate = (props) => (
         <TextInput source="name" fullWidth />
         <TextInput source="city" fullWidth />
         <TextInput source="address" fullWidth />
+        <TextInput source="phoneNumber" fullWidth />
         <TextInput
           source="openingHours"
           initialValue="8 AM - 10 PM"
