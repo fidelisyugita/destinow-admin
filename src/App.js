@@ -6,6 +6,8 @@ import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 import RestaurantIcon from "@material-ui/icons/Restaurant";
 import DirectionsBikeIcon from "@material-ui/icons/DirectionsBike";
 import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
+import Note from "@material-ui/icons/Note";
+import SurroundSound from "@material-ui/icons/SurroundSound";
 
 import { dataProvider, myAuthProvider } from "./lib/firebase";
 
@@ -24,6 +26,12 @@ import {
   TransportEdit,
   TransportCreate,
 } from "./pages/transports";
+import { NewsList, NewsEdit, NewsCreate } from "./pages/news";
+import {
+  LocalDiariesList,
+  LocalDiariesEdit,
+  LocalDiariesCreate,
+} from "./pages/localDiaries";
 
 const App = () => (
   <Admin
@@ -66,6 +74,20 @@ const App = () => (
       list={TransportList}
       edit={TransportEdit}
       create={TransportCreate}
+    />
+    <Resource
+      icon={Note}
+      name="news"
+      list={NewsList}
+      edit={NewsEdit}
+      create={NewsCreate}
+    />
+    <Resource
+      icon={SurroundSound}
+      name="localDiaries"
+      list={LocalDiariesList}
+      edit={LocalDiariesEdit}
+      create={LocalDiariesCreate}
     />
   </Admin>
 );

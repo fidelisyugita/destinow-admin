@@ -37,7 +37,7 @@ export const TransportList = (props) => {
     <List filters={<TransportFilter />} {...props}>
       {isSmall ? (
         <SimpleList
-          primaryText={(record) => record.title}
+          primaryText={(record) => record.name}
           secondaryText={(record) => record.description}
           // secondaryText={(record) => `${record.views} views`}
           tertiaryText={(record) =>
@@ -106,7 +106,7 @@ export const TransportEdit = (props) => (
           source="cover"
           label="Cover (max 200KB)"
           accept="image/*"
-          Transportholder={<p>Drop your image here</p>}
+          placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
@@ -115,7 +115,7 @@ export const TransportEdit = (props) => (
           source="images"
           label="Images (max 200KB)"
           accept="image/*"
-          Transportholder={<p>Drop your images here</p>}
+          placeholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 200} //200KB
         >
@@ -199,7 +199,7 @@ export const TransportCreate = (props) => (
           source="cover"
           label="Cover (max 200KB)"
           accept="image/*"
-          Transportholder={<p>Drop your image here</p>}
+          placeholder={<p>Drop your image here</p>}
           maxSize={1024 * 1 * 200} //200KB
         >
           <ImageField source="src" title="name" />
@@ -208,7 +208,7 @@ export const TransportCreate = (props) => (
           source="images"
           label="Images (max 200KB)"
           accept="image/*"
-          Transportholder={<p>Drop your images here</p>}
+          placeholder={<p>Drop your images here</p>}
           multiple
           maxSize={1024 * 1 * 200} //200KB
         >
