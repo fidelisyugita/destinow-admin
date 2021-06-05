@@ -17,6 +17,8 @@ import {
   FormTab,
   ArrayInput,
   SimpleFormIterator,
+  RichTextField,
+  ArrayField,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
 
@@ -36,7 +38,7 @@ export const LocalDiariesList = (props) => {
       {isSmall ? (
         <SimpleList
           primaryText={(record) => record.title}
-          secondaryText={(record) => record.description}
+          secondaryText={(record) => record.createdBy.displayName}
           // secondaryText={(record) => `${record.views} views`}
           tertiaryText={(record) =>
             new Date(record.updatedAt).toLocaleDateString()
@@ -46,7 +48,7 @@ export const LocalDiariesList = (props) => {
         <Datagrid>
           <TextField source="id" fullWidth />
           <TextField source="title" fullWidth />
-          <TextField source="description" fullWidth />
+          <TextField source="createdBy[displayName]" fullWidth />
           <EditButton />
         </Datagrid>
       )}
@@ -59,79 +61,63 @@ export const LocalDiariesEdit = (props) => (
     <TabbedForm>
       <FormTab label="summary">
         <TextInput disabled source="id" fullWidth />
-        <TextInput source="title" fullWidth />
-        <TextInput source="description" fullWidth />
+        <TextInput disabled source="title" fullWidth />
+        <TextInput disabled source="createdBy[displayName]" fullWidth />
 
-        <ImageInput
-          source="cover"
-          label="Cover (max 200KB)"
-          accept="image/*"
-          placeholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 200} //200KB
-        >
-          <ImageField source="src" title="name" />
-        </ImageInput>
+        <ImageField source="cover" title="cover" />
 
-        <BooleanInput source="isActive" label="Active" />
+        <BooleanInput source="isActive" label="Active" defaultValue={false} />
         <BooleanInput source="isRecommended" label="Recommend" />
       </FormTab>
 
       <FormTab label="paragraphs">
-        <ArrayInput source="paragraphs">
-          <SimpleFormIterator>
-            <RichTextInput source="content" label="Content" />
-            <ImageInput
-              source="image"
-              label="Image (max 200KB)"
-              accept="image/*"
-              Restaurantholder={<p>Drop your image here</p>}
-              maxSize={1024 * 1 * 200} //200KB
-            >
-              <ImageField source="src" title="name" />
-            </ImageInput>
-          </SimpleFormIterator>
-        </ArrayInput>
+        <ArrayField source="paragraphs" fullWidth>
+          <Datagrid>
+            <RichTextField source="text" label="text" />
+            <ImageField source="image" title="image" />
+          </Datagrid>
+        </ArrayField>
       </FormTab>
     </TabbedForm>
   </Edit>
 );
 
-export const LocalDiariesCreate = (props) => (
-  <Create {...props}>
-    <TabbedForm>
-      <FormTab label="summary">
-        <TextInput source="title" fullWidth />
-        <TextInput source="description" fullWidth />
+// export const LocalDiariesCreate = (props) => (
+//   <Create {...props}>
+//     <TabbedForm>
+//       <FormTab label="summary">
+//         <TextInput source="title" fullWidth />
+//         <TextInput source="description" fullWidth />
 
-        <ImageInput
-          source="cover"
-          label="Cover (max 200KB)"
-          accept="image/*"
-          placeholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 200} //200KB
-        >
-          <ImageField source="src" title="name" />
-        </ImageInput>
-        <BooleanInput source="isActive" label="Active" defaultValue={true} />
-        <BooleanInput source="isRecommended" label="Recommend" />
-      </FormTab>
+//         <ImageInput
+//           source="cover"
+//           label="Cover (max 200KB)"
+//           accept="image/*"
+//           placeholder={<p>Drop your image here</p>}
+//           maxSize={1024 * 1 * 200} //200KB
+//         >
+//           <ImageField source="src" title="name" />
+//         </ImageInput>
+//         <BooleanInput source="isActive" label="Active" defaultValue={true} />
+//         <BooleanInput source="isRecommended" label="Recommend" />
+//       </FormTab>
 
-      <FormTab label="paragraphs">
-        <ArrayInput source="paragraphs">
-          <SimpleFormIterator>
-            <RichTextInput source="content" label="Content" />
-            <ImageInput
-              source="image"
-              label="Image (max 200KB)"
-              accept="image/*"
-              Restaurantholder={<p>Drop your image here</p>}
-              maxSize={1024 * 1 * 200} //200KB
-            >
-              <ImageField source="src" title="name" />
-            </ImageInput>
-          </SimpleFormIterator>
-        </ArrayInput>
-      </FormTab>
-    </TabbedForm>
-  </Create>
-);
+//       <FormTab label="paragraphs">
+//         <ArrayInput source="paragraphs">
+//           <SimpleFormIterator>
+//             <RichTextInput source="content" label="Content" />
+//             <ImageInput
+//               source="image"
+//               label="Image (max 200KB)"
+//               accept="image/*"
+//               Restaurantholder={<p>Drop your image here</p>}
+//               maxSize={1024 * 1 * 200} //200KB
+//             >
+//               <ImageField source="src" title="name" />
+//             </ImageInput>
+//           </SimpleFormIterator>
+//         </ArrayInput>
+//       </FormTab>
+//     </TabbedForm>
+//   </Create>
+// );

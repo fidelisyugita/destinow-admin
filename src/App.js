@@ -27,11 +27,7 @@ import {
   TransportCreate,
 } from "./pages/transports";
 import { NewsList, NewsEdit, NewsCreate } from "./pages/news";
-import {
-  LocalDiariesList,
-  LocalDiariesEdit,
-  LocalDiariesCreate,
-} from "./pages/localDiaries";
+import { LocalDiariesList, LocalDiariesEdit } from "./pages/localDiaries";
 
 const App = () => (
   <Admin
@@ -87,7 +83,6 @@ const App = () => (
       name="localDiaries"
       list={LocalDiariesList}
       edit={LocalDiariesEdit}
-      create={LocalDiariesCreate}
     />
   </Admin>
 );
