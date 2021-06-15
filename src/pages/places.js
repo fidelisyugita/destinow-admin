@@ -131,20 +131,20 @@ export const PlaceEdit = (props) => (
       <FormTab label="pictures">
         <ImageInput
           source="cover"
-          label="Cover (max 200KB)"
+          label="Cover (max 500KB)"
           accept="image/*"
           placeholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 200} //200KB
+          maxSize={1024 * 1 * 500} //500KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
-          label="Images (max 200KB)"
+          label="Images (max 500KB)"
           accept="image/*"
           placeholder={<p>Drop your images here</p>}
           multiple
-          maxSize={1024 * 1 * 200} //200KB
+          maxSize={1024 * 1 * 500} //500KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
@@ -229,20 +229,20 @@ export const PlaceCreate = (props) => (
       <FormTab label="pictures">
         <ImageInput
           source="cover"
-          label="Cover (max 200KB)"
+          label="Cover (max 500KB)"
           accept="image/*"
           placeholder={<p>Drop your image here</p>}
-          maxSize={1024 * 1 * 200} //200KB
+          maxSize={1024 * 1 * 500} //500KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
         <ImageInput
           source="images"
-          label="Images (max 200KB)"
+          label="Images (max 500KB)"
           accept="image/*"
           placeholder={<p>Drop your images here</p>}
           multiple
-          maxSize={1024 * 1 * 200} //200KB
+          maxSize={1024 * 1 * 500} //500KB
         >
           <ImageField source="src" title="name" />
         </ImageInput>
